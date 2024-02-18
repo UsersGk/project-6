@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(129, 199, 176);
+}
+.welcome{
+
+    align-items: center;
+    justify-content: center;
+}
+.welcome h1{
+/* font-size: xx-large; */
+font-size: 8vh;
+text-wrap: wrap;
+line-height: 2;
+color: brown;
+text-align: center;
+}
+.welcome p{
+  text-align: center;
+font-weight: bolder;
+font-size:large;
+margin-bottom: 15px;
+}
+.second .mission h2{
+    color: rgb(57, 95, 44);
+font-size: 70px;
+}
+.point ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  list-style: none;
+}
+.second {
+display: grid;
+grid-template-columns: 1fr 1fr;
+
+}
+.point h2{
+    color: azure;
+    line-height: 2;
+    margin-left: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+.join{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.join span{
+    color: rgb(6, 53, 95);
+    font-weight: bold;
+}
+.join h1{
+    color:rgb(151, 74, 68) !important;
+}
+.join p{
+    font-size: 20px;
+    line-height: 2;
+}
+ .second .mission{
+/* border: 2px solid black; */
+justify-content: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+line-height: 1.5;
+ }
+ .second .mission p{
+    color: rgb(218, 107, 33);
+    font-size: larger;
+    font-weight: bolder;
+ }
+/* .second img{
+    margin-left:20px ;
+} */
+.point ul li{
+background-color: rgb(214, 132, 9);
+padding: 20px;
+margin: 2%;
+border-radius: 20px;
+font-size: larger;
+color: antiquewhite;
+
+}
+.point ul li span{
+    color: rgb(34, 3, 3);
+margin: 0;
+}

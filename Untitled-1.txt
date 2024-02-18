@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment System</title>
+    <link rel="stylesheet" href="css/indexstyle.css">
+    <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+   <h1>  DoctorAS</h1>
+</div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Booking</li>
+            <li>Check</li>
+            <li>Contact</li>
+            <li>Doctor</li>
+            <div><Button>Logout</Button></li>
+        </ul>
+
+    </header>
