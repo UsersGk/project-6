@@ -8,6 +8,6 @@ $role = "patient";
 $hash = password_hash($psword,  
           PASSWORD_DEFAULT); 
 //inserting the values
-$insert= "INSERT INTO user VALUES('$username', '$email','$hash', '$role')";
-mysqli_query( $con,$insert ); 
+$insert= "INSERT INTO user VALUES('','$username', '$email','$hash', '$role')";
+mysqli_query( $con,$insert); 
 ?>
