@@ -1,5 +1,14 @@
-/* Button style */
-.button {
+
+*{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+}
+input[type='submit']{
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
@@ -8,13 +17,14 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    /* margin: 4px 2px; */
     cursor: pointer;
     border-radius: 5px;
+   left: 0;
 }
 
 /* Hover effect */
-.button:hover {
+input[type='submit']:hover {
     background-color: #45a049; /* Darker green */
 }
 
@@ -23,13 +33,15 @@
     background-color: #3e8e41;
 }
 
-/* Table style */
 table {
-    overflow-x: hidden;
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
     text-align: center;
+}
+.innertable{
+    overflow: auto;
+    width: 100%;
 }
 
 /* Table header cells */
@@ -38,7 +50,7 @@ th {
     border: 1px solid #ddd;
     padding: 8px;
     /* text-align: left; */
-}
+} 
 
 /* Table data cells */
 td {

@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule</title>
-    <link rel="stylesheet" href="css/doctor/doctorscchedules.css">
-</head>
-
-<body>
-    <div class="navbar">
-        <div class="title">
-          <h1>DoctorAS</h1>
-        </div>
-        <div class="navbar_container">
-            <ul>
-                <li><a href="doctorschedule.php">Schedule</a></li>
-                <li><a href="viewpatient.php">Patient</a></li>
-            </ul>
-            <div class="login">
-                <p>Doctor Name</p>
-                <img src="photo/doctors.png" alt="" height="50" style="border-radius: 100px;">
-                <button class="logout">Logout</button>
-            </div>
-        </div>
-    </div>
+<?php
+require_once("headerfile/doctornav.php");
+ ?>
     <div class="container">
         <br>
         <h2>Doctor's Schedule List</h2>
@@ -42,6 +18,7 @@
         </table><br><br>
         <button class="button add-schedule">Add</button>
     </div>
+   
     <dialog class="model" id="model">
         <form action="" method="add_schedule">
             <label for="schedule_date">Enter the date:</label>
@@ -55,19 +32,36 @@
         </form><br>
     </dialog>
     <script>
-        const model = document.querySelector('.model');
-        const add = document.querySelector('.add-schedule');
-        const close = document.querySelector('.close-schedule');
-        const update = document.querySelector('.update-schedule');
+    const model = document.querySelector('.model');
+    const add = document.querySelector('.add-schedule');
+    const close = document.querySelector('.close-schedule');
+    const dialog = document.getElementById('doctor');
 
-        add.addEventListener('click',() => {
-            model.showModal();
-        });
-        close.addEventListener('click',() =>{
-            modal.close();
-        });
+    function imgClicked() {
+        dialog.showModal();
+        model.close(); // Close the other dialog
+    }
 
-    </script>
+    function closedialog() {
+        dialog.close();
+    }
+
+    add.addEventListener('click', () => {
+        model.showModal();
+        dialog.close(); // Close the other dialog
+    });
+
+    close.addEventListener('click', () => {
+        model.close();
+    });
+
+    // Add event listener for the close button inside the doctor dialog
+    const doctorCloseBtn = document.querySelector('.doctor button');
+    doctorCloseBtn.addEventListener('click', () => {
+        dialog.close();
+    });
+</script>
+
 </body>
 
 </html>
