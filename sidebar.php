@@ -45,7 +45,7 @@
         <h1>Online booking system</h1>
         <ul>
             <li><?php echo $user?></li>
-            <li><button type="button">logout</button></li>
+            <li><a href="logout.php"><button type="button">logout</button></a></li>
         </ul>
     </header>
 <script>

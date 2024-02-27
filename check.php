@@ -34,7 +34,6 @@ require("database/conn.php"); // Include your database connection script
             <th>Appointment Date</th>
             <th>Payment screeshot</th>
             <th>Request</th>
-            <th colspan="4">Alter</th>
         </tr>
         <tr>
         <?php
@@ -60,14 +59,6 @@ require("database/conn.php"); // Include your database connection script
                     <td><a href="database/payment/<?php echo $row["photo"]; ?>"><img src="database/payment/<?php echo $row["photo"]; ?>" alt="Payment Screenshot" width="100" height="100"></a></td>
                     <td><?php echo $row["request"]; ?></td>
                     <!-- Assuming you store photo path in the database -->
-                    <td><form action="database/updateappointment.php" method="post">
-                        <input type="hidden" name="id" value="<?php echo $row["sn"];?>">
-                        <input type="submit" value="update" class="buttom" name="submit"/>
-            </form></td>
-                    <td ><form action="database/deleteappointment.php" method="get" onsubmit="return confirm('Are you sure to delete?')">
-                        <input type="hidden" name="id" value="<?php echo $row["sn"];?>">
-                        <input type="submit" value="Delete" class="buttom" name="submit"/>
-            </form></td> <!-- Assuming you'll add functionality here -->
                 </tr>
                 <?php
             }

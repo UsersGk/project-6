@@ -1,14 +1,67 @@
-<link rel="stylesheet" href="css/admincss/doctordashstyle.css">
+<!-- <link rel="stylesheet" href="css/admincss/doctordashstyle.css"> -->
 <style>
-       ul li:nth-child(2){
-            background-color: #ccc; /* Change to the desired background color */
-            padding: 7px; /* Change to the desired padding */
-            margin:0 auto;
-        }
+       /*  */
+        table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    text-align: center;
+}
+input[type='submit']{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /* margin: 4px 2px; */
+    cursor: pointer;
+    border-radius: 5px;
+   left: 0;
+}
+.innertable{
+    overflow: auto;
+    width: 100%;
+}
+input[type='submit']:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+/* Active state */
+.button:active {
+    background-color: #3e8e41;
+}
+/* Table header cells */
+th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    /* text-align: left; */
+} 
+
+/* Table data cells */
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect on rows */
+tr:hover {
+    /* cursor: pointer; */
+    background-color: #ddd;
+ 
+}
     </style>
 <?php
- require("database/conn.php"); // Include your database connection script
 require_once("headerfile/doctornav.php");
+echo $user;
 ?>
     <div class="container">
         <br>
@@ -33,6 +86,7 @@ require_once("headerfile/doctornav.php");
         </tr>
         <tr>
         <?php
+        echo $user;
         // Execute SELECT query
         $result = mysqli_query($conn, "SELECT * FROM appointment where demail='$user';");
 
@@ -57,25 +111,26 @@ require_once("headerfile/doctornav.php");
                         <input type="hidden" name="id" value="<?php echo $row["sn"];?>">
                         <input type="submit" value="update" class="buttom" name="submit"/>
             </form></td>
-                    <td ><form action="database/deleteappointment.php" method="get" onsubmit="return confirm('Are you sure to delete?')">
+                    <td ><form action="database/deletedoctop.php" method="get" onsubmit="return confirm('Are you sure to delete?')">
                         <input type="hidden" name="id" value="<?php echo $row["sn"];?>">
-                        <input type="submit" value="Delete" class="buttom" name="submit"/>
+                        <input type="submit" value="Delete" class="buttom" name="delete"/>
             </form></td> <!-- Assuming you'll add functionality here -->
                 </tr>
                 <?php
             }
         } else {
-            echo "<tr><td colspan='10'>No records found</td></tr>";
+            echo "<tr><td colspan='11'>No records found</td></tr>";
         }
 
         // Close the database connection
-        mysqli_close($conn);
+        // mysqli_close($conn);
         ?> 
 </tr>
     </table>
     </div>
     </div>
 </body>
+
 
     <script>
     // Get reference to the dialog element

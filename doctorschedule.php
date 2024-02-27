@@ -1,4 +1,5 @@
 <?php
+ require("database/conn.php"); // Include your database connection script
 require_once("headerfile/doctornav.php");
  ?>
     <div class="container">
@@ -11,26 +12,30 @@ require_once("headerfile/doctornav.php");
                 <th>Time</th>
             </tr>
             <tr>
-                <td>1</td>
-                <td></td>
-                <td></td>
+            <?php
+       
+
+        // Execute SELECT query
+        $result = mysqli_query($conn, "SELECT * FROM doctor where email='$user';");
+
+        // Check if query was successful
+        if ($result && mysqli_num_rows($result) > 0) {
+            // Output data of each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+                <tr>
+                    <td>1</td>
+                    <td><?php echo $row["Date"]; ?></td>
+                    <td><?php echo $row["starttime"]; ?></td>
+                    <td><?php echo $row["endtime"]; ?></td>
+                   <?php
+            }
+        }
+        ?>
             </tr>
         </table><br><br>
-        <button class="button add-schedule">Add</button>
+        <!-- <button class="button add-schedule">Add</button> -->
     </div>
-   
-    <dialog class="model" id="model">
-        <form action="" method="add_schedule">
-            <label for="schedule_date">Enter the date:</label>
-            <input type="date" id="schedule_date"><br><br>
-            <label for="schedule_started_time">Enter the started time:</label>
-            <input type="time" name="schedule_started_time" id="schedule_started_time"><br><br>
-            <label for="schedule_end_time">Enter the end time:</label>
-            <input type="time" name="schedule_end_time" id="schedule_end_time"><br><br>
-            <button class="button close-schedule" >Close</button>
-            <button type="submit" class="button updateschedule" >Update</button>
-        </form><br>
-    </dialog>
     <script>
     const model = document.querySelector('.model');
     const add = document.querySelector('.add-schedule');
