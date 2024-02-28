@@ -1,13 +1,14 @@
 body{
     margin: 0;
+    
 }
 .container {
     display: grid;
    font-size: 18px;
-
    display: grid;
    justify-content: center;
    padding-top: 50px;
+   
 }
 .container .form-box{
     border: 2px solid #000;
@@ -17,6 +18,7 @@ body{
     display: grid;
     text-align: left;
     width: 800px;
+    
 }
 .form-box h2{
     font-size: 2em;
