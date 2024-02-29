@@ -14,7 +14,7 @@
                    <li><a href="booking.php">Booking</a></li>
                    <li><a href="check.php">Check</a></li>
                    <li><a href="contact.php">Contact</a></li>
-                   <li><a href="">Doctor</a></li>
+                   <li><a href="doctor.php">Doctor</a></li>
                 </ul>
            </div>
            <div class="footer-content">

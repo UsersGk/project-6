@@ -1,3 +1,17 @@
+<?php
+   session_start();
+
+   // Redirect to login if user is not logged in
+   if (!isset($_SESSION['username'])) {
+       header('location: login.php');
+       exit(); // Terminate script after redirection
+   }
+   
+   require("database/conn.php");
+   
+   $user = $_SESSION['username'];
+   
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +36,7 @@
         <li><a href="dashboardpatient.php" id="patientlink">Patient</a></li>
         <li><a href="dashboardappointment.php" id="appointmentlink">Appointment</a></li>
         <li><a href="dashboarduser.php" id="userlink">User</a></li>
-        <li><a href="dashboardlogout.php" id="logoutlink">logout</a></li>
+        <li><a href="logout.php" id="logoutlink">logout</a></li>
     </ul>
 </section>
 <div class="last">
@@ -30,8 +44,8 @@
     <header>
         <h1>Online booking system</h1>
         <ul>
-            <li>admin email</li>
-            <li><button type="button">logout</button></li>
+            <li><?php echo $user?></li>
+            <li><a href="logout.php"><button type="button">logout</button></a></li>
         </ul>
     </header>
 <script>

@@ -1,72 +1,67 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-}
-
-/* Centering the form */
+/* Style for check class */
 .check {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-/* Form container styling */
-.background {
-    background-color: #fff;
+    margin: 20px;
+  }
+  
+  /* Style for background class */
+  .background {
+    background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Form styling */
-form {
-    width: 350px;
-}
-
-/* Label styling */
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-.background h4{
-    color: #0056b3;
-text-align: center;
-font-size: 25px;
-line-height: 1.5;
-margin-bottom: 10px;
-}
-
-/* Input field styling */
-input[type="text"],
-input[type="email"] {
-    width: calc(100% - 20px); /* Subtracting padding from width */
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-/* Submit button styling */
-input[type="submit"] {
+  }
+  
+  /* Style for h4 inside background class */
+  .background h4 {
+    margin-bottom: 20px;
+  }
+  
+  /* Style for outertable class */
+  .outertable {
+    overflow-x: auto;
+  }
+  
+  /* Style for innertable class */
+  .innertable {
     width: 100%;
+    overflow-y: auto;
+  }
+  
+  /* Style for table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Style for th and td */
+  th, td {
     padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Style for th */
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for tr:nth-child(even) */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for tr:hover */
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* Style for img inside table */
+  table img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Style for forms inside td */
+  td form {
+    display: inline;
+  }
+  

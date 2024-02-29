@@ -10,6 +10,10 @@
     <?php
     include_once("sidebar.php");
     ?>
+    <div class="outertable">
+        <div class="innertable">
+
+ 
     <table>
         <tr>
             <th>SN</th>
@@ -18,26 +22,51 @@
             <th>Email</th>
             <th>DOB</th>
             <th>Contact no</th>
-            <th>Doctor Name</th>
-            <th>Appointment Time</th>
-            <th>Payment Screen Shot</th>
-            <th colspan="6">Alter</th>
+            <th>Photo</th>
+            <th colspan="3">Alter</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>John Doe</td>
-            <td>123 Main St, City</td>
-            <td>JohnDoe@gmail.com</td>
-            <td>2055/11/24</td>
-            <td>123-456-7890</td>
-            <td>Shiva</td>
-            <td>3:50 am</td>
-            <td>photo</td>
-            <td colspan="2"><a href="#" class="button">view</a></td>
-            <td colspan="2"><a href="#" class="button">Edit</a></td>
-            <td colspan="2"><a href="#" class="button">delete</a></td> <!-- Assuming you'll add functionality here -->
-        </tr>
+
+        <?php
+        require("database/conn.php"); // Include your database connection script
+
+        // Execute SELECT query
+        $result = mysqli_query($conn, "SELECT * FROM patient");
+
+        // Check if query was successful
+        if ($result && mysqli_num_rows($result) > 0) {
+            // Output data of each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+                <tr>
+                    <td><?php echo $row["sn"]; ?></td>
+                    <td><?php echo $row["Name"]; ?></td>
+                    <td><?php echo $row["Address"]; ?></td>
+                    <td><?php echo $row["Email"]; ?></td>
+                    <td><?php echo $row["DOB"]; ?></td>
+                    <td><?php echo $row["Contactno"]; ?></td>
+                    <td><a href="database/photo/<?php echo $row["photo"]; ?>"><img src="database/photo/<?php echo $row["photo"]; ?>" alt="Payment Screenshot" width="100" height="100"></a></td>
+                    <!-- Assuming you store photo path in the database -->
+                    <td><form action="database\updatepatients.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $row["sn"];?>">
+                        <input type="submit" value="update" class="buttom" name="submit"/>
+            </form></td>
+                    <td ><form action="database\deletepatient.php" method="get" onsubmit="return confirm('Are you sure to delete?')">
+                        <input type="hidden" name="id" value="<?php echo $row["sn"];?>">
+                        <input type="submit" value="Delete" class="buttom" name="submit"/>
+            </form></td> <!-- Assuming you'll add functionality here -->
+                </tr>
+                <?php
+            }
+        } else {
+            echo "<tr><td colspan='10'>No records found</td></tr>";
+        }
+
+        // Close the database connection
+        mysqli_close($conn);
+        ?>
         <!-- Add more rows as needed -->
     </table>
+    </div>
+    </div>
 </body>
 </html>
