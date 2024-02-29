@@ -65,7 +65,7 @@ input[type="submit"]:hover {
     margin-top: 5px;
 }
 
-        </style>
+</style>
 </head>
 <body>
     <?php

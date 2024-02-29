@@ -61,14 +61,18 @@ input[type="submit"]:hover {
 <body>
     <h2>Add New User</h2>
     <form action="" method="post">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
         <label for="username">User Name:</label>
-        <input type="text" id="username" name="username" required><br><br>
+        <input type="text" id="username" name="username" required><br>
         
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" required><br>
         
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
+        <input type="password" id="password" name="password" required><br>
         
         <label for="role">Role:</label>
         <select id="role" name="role">
@@ -91,12 +95,21 @@ input[type="submit"]:hover {
         $email = $_POST["email"];
         $password = md5($_POST["password"]);
         $role = $_POST["role"];
-    
+        $name = $_POST['name'];
         // Insert data into the database
         $sql = "INSERT INTO userdata (username, email, password, role) VALUES ('$username', '$email', '$password', '$role')";
+       
         if (mysqli_query($conn, $sql)) {
             header("Location:dashboarduser.php");
-            // echo "Error: Unable to add user. " . mysqli_error($conn);
+            if ($role =='doctor'){
+                $sql1 = "INSERT INTO doctor (Name, email) VALUES ('$name', '$email')";
+            }
+            if($role == 'patient'){
+                $sql1 = "INSERT INTO patient (Name, email) VALUES ('$name', '$email')";
+            } 
+            if (mysqli_query($conn, $sql1)) {
+                header("Location:dashboarduser.php");
+            }
         }
     
         // Close connection

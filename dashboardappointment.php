@@ -15,8 +15,6 @@
     ?>
     <div class="outertable">
         <div class="innertable">
-
-     
        <table>
         <tr>
             <th>SN</th>

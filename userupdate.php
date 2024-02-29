@@ -127,6 +127,7 @@ input[type="submit"]:hover {
         $sql = "DELETE FROM userdata WHERE sn='$id'";
         if (mysqli_query($conn, $sql)) {
             header("Location: dashboarduser.php");
+           
             exit();
         } else {
             echo "Error: Unable to delete user. " . mysqli_error($conn);
