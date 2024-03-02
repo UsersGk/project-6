@@ -1,113 +1,91 @@
-/* Resetting default margin and padding */
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
-
-/* Body styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-}
-
-/* Header styles */
-.welcome {
-  background-color: #007bff;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
 .welcome h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 45px;
+  color: #e4e0ee;
+  text-wrap: wrap;
+  line-height: 2;
+  text-align: center;
 }
-
 .welcome p {
-  font-size: 18px;
-}
-
-/* Mission section styles */
-.second {
-  padding: 40px 20px;
-}
-
-.mission {
   text-align: center;
-}
-
-.mission h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.mission p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* Image styles */
-.second img {
-  display: block;
-  margin: 0 auto;
-  margin-top: 20px;
-  border-radius: 8px;
-}
-
-/* What Makes Us Different section styles */
-.point {
-  background-color: #fff;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.point h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-bottom: 15px;
+  line-height: 160%;
 }
 
 .point ul {
-  list-style-type: none;
-  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style: none;
 }
 
-.point li {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.point li span {
-  font-weight: bold;
-}
-
-/* Join Us section styles */
-.join {
+.point h2 {
+  padding-top: 15px;
+  color: #e4e0ee;
+  line-height: 2;
+  margin-left: 35px;
   text-align: center;
-  padding: 40px 20px;
-  background-color: #007bff;
-  color: #fff;
+  font-size: 32px;
+  text-decoration: underline;
 }
-
-.join h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+.point ul li {
+  background-color: #1f46f7;
+  padding: 15px;
+  margin: 2%;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #c7c5cd;
+  letter-spacing: 1px;
+  align-items: center;
+  justify-content: center;
 }
-
-.join p {
-  font-size: 18px;
+.point ul li span {
+  color: #171715;
+  margin: 0;
+  font-weight: bold;
+ 
+}
+.second {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.second .mission {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   line-height: 1.5;
 }
-
+.second .mission p {
+  color: #171715;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.second .mission h1 {
+  color: #e4e0ee;
+  font-size: 45px;
+}
+.join {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
 .join span {
+  color: #171715;
   font-weight: bold;
 }
-
-/* Footer styles */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+.join h1 {
+  padding:15px ;
+  color: #171715 !important;
+}
+.join p {
+  font-size: 20px;
+  line-height: 2;
+  row-gap: 20px;
 }

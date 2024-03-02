@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
-<?php
+    <?php
     include_once("sidebar.php");
     ?>
    <div class="details">

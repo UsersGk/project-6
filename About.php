@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="css/aboutstyle.css">
+    <link rel="stylesheet" href="css/aboutstyless.css">
 </head>
 <body>
   <?php
@@ -17,16 +17,15 @@
 
 <div class="second">
 <div class="mission">
-<h2>Our Mission</h2>
+<h1>Our Mission</h1>
 <p>Our mission is to help patients and healthcare <br>providers connect seamlessly. We want to make it simple<br> for patients to book appointments and for clinics<br> to manage their schedules efficiently</p>
 </div>
-<img src="photo/photo1.jpg" alt="" width="100%" height="100%">
+<img src="photo/photo15.png" alt="" width="100%" height="500px">
 </div>
 
 <div class="point">
 <h2>What Makes Us Different</h2>
 <ul>
-
   <li><span>Easy to Use:</span> Our system is designed to be user-friendly for both patients and clinic staff. No complicated processes here!</li>
   <li><span>Helpful Features: </span>We offer handy features like automatic reminders and flexible scheduling options to make life easier for everyone.</li>
   <li><span>Friendly Support: </span>We're here to help! Our team provides personalized support to ensure a smooth experience for our users</li>
