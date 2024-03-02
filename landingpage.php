@@ -90,7 +90,7 @@
         </div>
         <div class="main4">
             <div class="par1">
-                <h1>i love you ujjwal. I love you too!</h1>
+                <h1>Up to date </h1>
                 <p>A patients Customer Profile automatically updates when they book an appointment.Centralize contact
                     information and attach notes for fast access before appointment . your online doctor scheduling app
                     allows you to digitally back-up patient health records and treatment recommendation.</p>
